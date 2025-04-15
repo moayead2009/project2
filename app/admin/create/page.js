@@ -28,17 +28,17 @@ export default function CreateItem() {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h1>Create New Item</h1>
       <form onSubmit={handleSubmit}>
-        <input name="id" placeholder="ID" onChange={handleChange} required /><br />
-        <input name="item_name" placeholder="Item Name" onChange={handleChange} required /><br />
-        <input name="category" placeholder="Category" onChange={handleChange} required /><br />
-        <input name="quantity" type="number" placeholder="Quantity" onChange={handleChange} required /><br />
-        <input name="price" type="number" step="0.01" placeholder="Price" onChange={handleChange} required /><br />
+        <input name="id" placeholder="ID" onChange={handleChange} required />
+        <input name="item_name" placeholder="Item Name" onChange={handleChange} required />
+        <input name="category" placeholder="Category" onChange={handleChange} required />
+        <input name="quantity" type="number" placeholder="Quantity" onChange={handleChange} required />
+        <input name="price" type="number" step="0.01" placeholder="Price" onChange={handleChange} required />
         <button type="submit">Submit</button>
       </form>
-      <a href="/admin">Back to Admin</a>
+      <a href="/admin" className="link-button" style={{ marginTop: '20px' }}>Back to Admin</a>
     </div>
   );
 }

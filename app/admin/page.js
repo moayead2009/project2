@@ -23,7 +23,7 @@ export default function AdminPage() {
     return (
         <div>
             <h1>Admin Panel</h1>
-            <a href="/admin/create">Create New</a>
+            <a href="/admin/create" className="link-button">Create New</a>
             <div className="table-container">
                 <div className="table-header">
                     <div>ID</div>

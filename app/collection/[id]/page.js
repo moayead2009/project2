@@ -22,20 +22,34 @@ async function getItem(id) {
   
     return (
       <div>
-        <a href="/collection">Back</a>
+        <a href="/collection" className="link-button">Back</a>
         <h1>{item.item_name} Details</h1>
-        <table>
-          <tbody>
-            <tr><td><strong>ID</strong></td><td>{item.id}</td></tr>
-            <tr><td><strong>Name</strong></td><td>{item.item_name}</td></tr>
-            <tr><td><strong>Category</strong></td><td>{item.category}</td></tr>
-            <tr><td><strong>Quantity</strong></td><td>{item.quantity}</td></tr>
-            <tr><td><strong>Price (CAD)</strong></td><td>{item.price}</td></tr>
-          </tbody>
-        </table>
+        <div className="table-container">
+          <div className="table-row">
+            <div><strong>ID</strong></div>
+            <div>{item.id}</div>
+          </div>
+          <div className="table-row">
+            <div><strong>Name</strong></div>
+            <div>{item.item_name}</div>
+          </div>
+          <div className="table-row">
+            <div><strong>Category</strong></div>
+            <div>{item.category}</div>
+          </div>
+          <div className="table-row">
+            <div><strong>Quantity</strong></div>
+            <div>{item.quantity}</div>
+          </div>
+          <div className="table-row">
+            <div><strong>Price (CAD)</strong></div>
+            <div>{item.price}</div>
+          </div>
+        </div>
       </div>
     );
   }
+  
   export async function generateStaticParams() {
     const res = await fetch('http://localhost:4000/items');
     const data = await res.json();
