@@ -11,14 +11,14 @@
       "id": "GRY002",
       "item_name": "Milk",
       "category": "Dairy",
-      "quantity": 10,
+      "quantity": "11",
       "price": 3.49
     },
     {
       "id": "GRY003",
       "item_name": "Eggs",
       "category": "Dairy",
-      "quantity": 30,
+      "quantity": "32",
       "price": 4.99
     },
     {
