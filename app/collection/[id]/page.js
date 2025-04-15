@@ -36,4 +36,13 @@ async function getItem(id) {
       </div>
     );
   }
+  export async function generateStaticParams() {
+    const res = await fetch('http://localhost:4000/items');
+    const data = await res.json();
+    const first10 = data.slice(0, 10);
+  
+    return first10.map(item => ({
+      id: item.id
+    }));
+  }
   
